@@ -121,7 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kumar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/path.zsh.inc'; fi
@@ -135,4 +135,6 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/kumar/homebrew/bin/terraform terraform
 
 # set docker env from minikube
-eval $(minikube -p minikube docker-env)
+# eval $(minikube -p minikube docker-env)
+eval $(minikube docker-env)
+
