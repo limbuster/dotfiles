@@ -13,14 +13,14 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- lvim.colorscheme = "tender"
 -- lvim.colorscheme = "tokyonight"
-lvim.colorscheme = "onedarker" -- default theme
+-- lvim.colorscheme = "onedarker" -- default theme
 -- lvim.colorscheme = "onedarkpro"
 -- lvim.colorscheme = "github_dark"
 
--- lvim.colorscheme = "material"
+lvim.colorscheme = "material"
 -- vim.g.material_style = "deep ocean"
 -- vim.g.material_style = "oceanic"
--- vim.g.material_style = "darker"
+vim.g.material_style = "darker"
 
 -- lvim.colorscheme = "vscode"
 -- vim.g.vscode_style = "dark"
