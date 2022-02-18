@@ -114,6 +114,7 @@ bindkey \^U backward-kill-line
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias vim="lvim"
 alias vi="lvim"
+alias k="kubectl"
 # alias nvim="lvim"
 
 export NVM_DIR="$HOME/.nvm"

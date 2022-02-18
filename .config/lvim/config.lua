@@ -11,6 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
+-- lvim.colorscheme = "tender"
 -- lvim.colorscheme = "tokyonight"
 lvim.colorscheme = "onedarker" -- default theme
 -- lvim.colorscheme = "onedarkpro"
@@ -123,6 +124,9 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
+-- vim.lsp.buf.formatting_sync(nil, 5000)
+vim.lsp.buf.formatting_sync(nil, 4000)
+
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
@@ -207,6 +211,7 @@ lvim.plugins = {
   {"iamcco/markdown-preview.nvim"},
   {"lukas-reineke/indent-blankline.nvim"},
   {"marko-cerovac/material.nvim"},
+  {"jacoborus/tender.vim"},
   {"mg979/vim-visual-multi"},
 }
 
@@ -219,7 +224,7 @@ lvim.plugins = {
 vim.opt.list = true
 
 require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
+  space_char_blankline = " ",
+  show_current_context = true,
+  show_current_context_start = true,
 }
