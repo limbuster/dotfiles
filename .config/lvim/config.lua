@@ -32,8 +32,13 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-c>"] = ":BufferClose<cr>"
 lvim.keys.normal_mode["<C-p>"] = ":Telescope find_files<cr>"
-lvim.keys.normal_mode["<leader>o"] = ":Telescope projects<cr>"
 
+lvim.builtin.which_key.mappings["o"] = {
+  ":Telescope projects<cr>", "Open project"
+}
+lvim.builtin.which_key.mappings["j"] = {
+  ":%!python -m json.tool<cr>", "Format JSON"
+}
 lvim.builtin.which_key.mappings["db"] = {
   "\"_diB<cr>", "Delete block"
 }
