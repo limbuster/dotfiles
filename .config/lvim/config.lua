@@ -11,20 +11,18 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
--- lvim.colorscheme = "tender"
--- lvim.colorscheme = "tokyonight"
 -- lvim.colorscheme = "onedarker" -- default theme
--- lvim.colorscheme = "onedarkpro"
--- lvim.colorscheme = "github_dark"
-
-lvim.colorscheme = "material"
--- vim.g.material_style = "deep ocean"
--- vim.g.material_style = "oceanic"
-vim.g.material_style = "darker"
-
+lvim.colorscheme = "onedarkpro"
+-- lvim.colorscheme = "desert"
 -- lvim.colorscheme = "vscode"
+-- lvim.colorscheme = "codedark"
 -- vim.g.vscode_style = "dark"
+-- vim.g.vscode_italic_comment = true
 
+
+-- Change to transparent_window which in effect will have black background
+lvim.transparent_window = true
+vim.g.vscode_disable_nvimtree_bg = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -45,7 +43,6 @@ lvim.builtin.which_key.mappings["db"] = {
 lvim.builtin.which_key.mappings["dd"] = {
   "\"_dd<cr>", "Delete line"
 }
-
 vim.opt.wrap = true
 
 
@@ -85,15 +82,16 @@ lvim.keys.visual_block_mode["K"] = false
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
--- }
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Trouble",
+  t = { "<cmd>TroubleToggle<cr>", "Toggle" },
+  r = { "<cmd>Trouble references<cr>", "References" },
+  f = { "<cmd>Trouble definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+}
 
 require('telescope').load_extension('projects')
 
@@ -209,15 +207,11 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  {"folke/tokyonight.nvim"},
-  {"projekt0n/github-nvim-theme"},
-  {"Mofiqul/vscode.nvim"},
   {"olimorris/onedarkpro.nvim"},
   {"iamcco/markdown-preview.nvim"},
   {"lukas-reineke/indent-blankline.nvim"},
-  {"marko-cerovac/material.nvim"},
-  {"jacoborus/tender.vim"},
   {"mg979/vim-visual-multi"},
+  {"folke/trouble.nvim"},
 }
 
 -- vim.g.blamer_enabled = 1
@@ -227,6 +221,36 @@ lvim.plugins = {
 -- }
 
 vim.opt.list = true
+
+-- Configure the status line
+local lualine = require('lualine')
+lualine.setup {
+  options = {
+    theme = 'auto',
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
 
 require("indent_blankline").setup {
   space_char_blankline = " ",
