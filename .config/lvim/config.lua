@@ -14,15 +14,10 @@ lvim.format_on_save = true
 -- lvim.colorscheme = "onedarker" -- default theme
 lvim.colorscheme = "onedarkpro"
 -- lvim.colorscheme = "desert"
--- lvim.colorscheme = "vscode"
--- lvim.colorscheme = "codedark"
--- vim.g.vscode_style = "dark"
--- vim.g.vscode_italic_comment = true
 
 
 -- Change to transparent_window which in effect will have black background
 lvim.transparent_window = true
-vim.g.vscode_disable_nvimtree_bg = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -31,8 +26,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-c>"] = ":BufferClose<cr>"
 lvim.keys.normal_mode["<C-p>"] = ":Telescope find_files<cr>"
 
-lvim.builtin.which_key.mappings["o"] = {
-  ":Telescope projects<cr>", "Open project"
+lvim.builtin.which_key.mappings["o"] = { ":Telescope projects<cr>", "Open project"
 }
 lvim.builtin.which_key.mappings["j"] = {
   ":%!python -m json.tool<cr>", "Format JSON"
@@ -212,6 +206,8 @@ lvim.plugins = {
   {"lukas-reineke/indent-blankline.nvim"},
   {"mg979/vim-visual-multi"},
   {"folke/trouble.nvim"},
+  {"editorconfig/editorconfig-vim"},
+  {"towolf/vim-helm"},
 }
 
 -- vim.g.blamer_enabled = 1
@@ -222,35 +218,41 @@ lvim.plugins = {
 
 vim.opt.list = true
 
--- Configure the status line
-local lualine = require('lualine')
-lualine.setup {
-  options = {
-    theme = 'auto',
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
-    disabled_filetypes = {},
-    always_divide_middle = true,
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
+lvim.builtin.lualine.options = {
+  theme = 'auto',
+  component_separators = { left = '', right = '' },
+  section_separators = { left = '', right = '' },
+  disabled_filetypes = {},
+  always_divide_middle = true,
 }
+
+lvim.builtin.lualine.sections = {
+  lualine_a = {'mode'},
+  lualine_b = {'branch', 'diff', 'diagnostics'},
+  lualine_c = {'filename'},
+  lualine_x = {'encoding', 'fileformat', 'filetype'},
+  lualine_y = {'progress'},
+  lualine_z = {'location'},
+}
+
+lvim.builtin.lualine.inactive_sections = {
+  lualine_a = {},
+  lualine_b = {},
+  lualine_c = {'filename'},
+  lualine_x = {'location'},
+  lualine_y = {},
+  lualine_z = {},
+}
+
+
+--   theme = 'auto',
+--   component_separators = { left = '', right = '' },
+--   section_separators = { left = '', right = '' },
+--   disabled_filetypes = {},
+--   always_divide_middle = true,
+-- }
+
+-- require('lualine').setup(config)
 
 require("indent_blankline").setup {
   space_char_blankline = " ",
