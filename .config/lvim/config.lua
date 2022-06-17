@@ -11,8 +11,8 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
--- lvim.colorscheme = "onedarker" -- default theme
-lvim.colorscheme = "onedarkpro"
+lvim.colorscheme = "onedarker"
+-- lvim.colorscheme = "onedarkpro"
 -- lvim.colorscheme = "desert"
 
 
@@ -23,13 +23,13 @@ lvim.transparent_window = true
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<C-c>"] = ":BufferClose<cr>"
+lvim.keys.normal_mode["<C-c>"] = ":BufferKill<cr>"
 lvim.keys.normal_mode["<C-p>"] = ":Telescope find_files<cr>"
 
 lvim.builtin.which_key.mappings["o"] = { ":Telescope projects<cr>", "Open project"
 }
 lvim.builtin.which_key.mappings["j"] = {
-  ":%!python -m json.tool<cr>", "Format JSON"
+  ":%!jq .<cr>", "Format JSON"
 }
 lvim.builtin.which_key.mappings["db"] = {
   "\"_diB<cr>", "Delete block"
@@ -91,7 +91,7 @@ require('telescope').load_extension('projects')
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = "float"
@@ -201,13 +201,15 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  {"olimorris/onedarkpro.nvim"},
-  {"iamcco/markdown-preview.nvim"},
-  {"lukas-reineke/indent-blankline.nvim"},
-  {"mg979/vim-visual-multi"},
-  {"folke/trouble.nvim"},
-  {"editorconfig/editorconfig-vim"},
-  {"towolf/vim-helm"},
+  { "olimorris/onedarkpro.nvim" },
+  { "iamcco/markdown-preview.nvim" },
+  { "lukas-reineke/indent-blankline.nvim" },
+  { "mg979/vim-visual-multi" },
+  { "folke/trouble.nvim" },
+  { "editorconfig/editorconfig-vim" },
+  { "towolf/vim-helm" },
+  { "fatih/vim-go" },
+  { 'chr4/nginx.vim' },
 }
 
 -- vim.g.blamer_enabled = 1
@@ -227,19 +229,19 @@ lvim.builtin.lualine.options = {
 }
 
 lvim.builtin.lualine.sections = {
-  lualine_a = {'mode'},
-  lualine_b = {'branch', 'diff', 'diagnostics'},
-  lualine_c = {'filename'},
-  lualine_x = {'encoding', 'fileformat', 'filetype'},
-  lualine_y = {'progress'},
-  lualine_z = {'location'},
+  lualine_a = { 'mode' },
+  lualine_b = { 'branch', 'diff', 'diagnostics' },
+  lualine_c = { 'filename' },
+  lualine_x = { 'encoding', 'fileformat', 'filetype' },
+  lualine_y = { 'progress' },
+  lualine_z = { 'location' },
 }
 
 lvim.builtin.lualine.inactive_sections = {
   lualine_a = {},
   lualine_b = {},
-  lualine_c = {'filename'},
-  lualine_x = {'location'},
+  lualine_c = { 'filename' },
+  lualine_x = { 'location' },
   lualine_y = {},
   lualine_z = {},
 }
