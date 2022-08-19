@@ -98,7 +98,7 @@ lvim.builtin.terminal.direction = "float"
 lvim.builtin.terminal.size = 100
 
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+-- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.setup.view.width = 40
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
@@ -122,7 +122,7 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- vim.lsp.buf.formatting_sync(nil, 5000)
-vim.lsp.buf.formatting_sync(nil, 4000)
+-- vim.lsp.buf.formatting_sync(nil, 4000)
 
 -- generic LSP settings
 
@@ -210,6 +210,7 @@ lvim.plugins = {
   { "towolf/vim-helm" },
   { "fatih/vim-go" },
   { 'chr4/nginx.vim' },
+  { 'jose-elias-alvarez/null-ls.nvim' },
 }
 
 -- vim.g.blamer_enabled = 1
