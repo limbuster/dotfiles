@@ -100,6 +100,7 @@ lvim.builtin.terminal.size = 100
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.setup.view.width = 40
+
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
