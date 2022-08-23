@@ -136,5 +136,5 @@ complete -o nospace -C /Users/kumar/homebrew/bin/terraform terraform
 
 # set docker env from minikube
 # eval $(minikube -p minikube docker-env)
-eval $(minikube docker-env)
+# eval $(minikube docker-env)
 
