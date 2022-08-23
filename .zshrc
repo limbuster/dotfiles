@@ -2,7 +2,6 @@ export GOPATH=/Users/kumar/code/go
 export PATH=$PATH:$GOPATH/bin
 
 export GOPRIVATE=gitlab.com/finverse/*  
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin::$HOME/homebrew/bin:/usr/local/bin:/usr/local/opt/libpq/bin/:$PATH
 
@@ -138,3 +137,5 @@ complete -o nospace -C /Users/kumar/homebrew/bin/terraform terraform
 # eval $(minikube -p minikube docker-env)
 # eval $(minikube docker-env)
 
+eval $(ssh-agent -s)
+ssh-add /Users/kumar/.ssh/id_ed25519
