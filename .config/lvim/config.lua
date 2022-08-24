@@ -211,7 +211,7 @@ lvim.plugins = {
   { "towolf/vim-helm" },
   { "fatih/vim-go" },
   { 'chr4/nginx.vim' },
-  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'tpope/vim-abolish' },
 }
 
 -- vim.g.blamer_enabled = 1
