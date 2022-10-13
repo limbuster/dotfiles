@@ -7,7 +7,7 @@ export PATH=$HOME/bin:$HOME/.local/bin::$HOME/homebrew/bin:/usr/local/bin:/usr/l
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kumar/.oh-my-zsh"
-export TERM=screen-256color tmux
+export TERM=screen-256color
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

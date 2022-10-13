@@ -11,7 +11,11 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "space-vim-dark"
+-- lvim.colorscheme = "dogrun"
+-- lvim.colorscheme = "edge"
+-- lvim.colorscheme = "everforest"
+-- lvim.colorscheme = "onedarker"
 -- lvim.colorscheme = "onedarkpro"
 -- lvim.colorscheme = "desert"
 
@@ -100,6 +104,7 @@ lvim.builtin.terminal.size = 100
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.setup.view.width = 40
+lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
 
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
@@ -212,6 +217,10 @@ lvim.plugins = {
   { "fatih/vim-go" },
   { 'chr4/nginx.vim' },
   { 'tpope/vim-abolish' },
+  { 'sainnhe/everforest' },
+  { 'sainnhe/edge' },
+  { 'wadackel/vim-dogrun' },
+  { 'liuchengxu/space-vim-dark' },
 }
 
 -- vim.g.blamer_enabled = 1
