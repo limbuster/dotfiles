@@ -1,5 +1,5 @@
 --[[
-lviM is the global options object
+lvim is the global options object
 
 Linters should be
 filled in as strings with either
