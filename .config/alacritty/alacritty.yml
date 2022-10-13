@@ -110,4 +110,4 @@ schemes:
       magenta: '0xff6ac1'
       cyan:    '0x9aedfe'
       white:   '0xf1f1f0'
-colors: *breeze
+colors: *snazzy
