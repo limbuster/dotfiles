@@ -11,7 +11,8 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "space-vim-dark"
+lvim.colorscheme = "tokyonight"
+-- lvim.colorscheme = "space-vim-dark"
 -- lvim.colorscheme = "dogrun"
 -- lvim.colorscheme = "edge"
 -- lvim.colorscheme = "everforest"
@@ -19,6 +20,10 @@ lvim.colorscheme = "space-vim-dark"
 -- lvim.colorscheme = "onedarkpro"
 -- lvim.colorscheme = "desert"
 
+-- use the default vim behavior for H and L
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<cr>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<cr>"
+-- vim.opt.scrolloff = 0 -- Required so L moves to the last line
 
 -- Change to transparent_window which in effect will have black background
 lvim.transparent_window = true
@@ -221,6 +226,7 @@ lvim.plugins = {
   { 'sainnhe/edge' },
   { 'wadackel/vim-dogrun' },
   { 'liuchengxu/space-vim-dark' },
+  { 'folke/tokyonight.nvim' },
 }
 
 -- vim.g.blamer_enabled = 1
