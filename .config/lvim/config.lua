@@ -45,7 +45,15 @@ lvim.builtin.which_key.mappings["db"] = {
 lvim.builtin.which_key.mappings["dd"] = {
   "\"_dd<cr>", "Delete line"
 }
+
+-- vim spefic settings
 vim.opt.wrap = true
+vim.opt.list = true
+
+-- Use hybrid number
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 
 
 -- The following config allows us to use <esc-j> or <esc-k> without swapping line. This is apparently caused by using lunar vim inside tmux
@@ -211,8 +219,6 @@ lvim.plugins = {
   { 'liuchengxu/space-vim-dark' },
   { 'folke/tokyonight.nvim' },
 }
-
-vim.opt.list = true
 
 lvim.builtin.lualine.options = {
   theme = 'auto',
