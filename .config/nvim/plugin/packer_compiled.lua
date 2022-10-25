@@ -254,6 +254,11 @@ _G.packer_plugins = {
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
+  },
   ["vim-illuminate"] = {
     loaded = true,
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/vim-illuminate",
