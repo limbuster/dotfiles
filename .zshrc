@@ -138,4 +138,3 @@ complete -o nospace -C /Users/kumar/homebrew/bin/terraform terraform
 # eval $(minikube docker-env)
 
 eval $(ssh-agent -s)
-# ssh-add /Users/kumar/.ssh/id_ed25519
