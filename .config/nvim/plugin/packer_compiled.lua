@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
   },
+  eslint = {
+    loaded = true,
+    path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/eslint",
+    url = "https://github.com/eslint/eslint"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -153,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

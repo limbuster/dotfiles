@@ -103,6 +103,8 @@ return packer.startup(function(use)
   -- My specific plugins
   use { "folke/trouble.nvim" }
   use { "fatih/vim-go" }
+  use { "iamcco/markdown-preview.nvim" }
+  use { "eslint/eslint" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
