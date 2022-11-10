@@ -105,6 +105,8 @@ return packer.startup(function(use)
   use { "fatih/vim-go" }
   use { "iamcco/markdown-preview.nvim" }
   use { "eslint/eslint" }
+  use { "mg979/vim-visual-multi" }
+  use { "rust-lang/rust.vim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

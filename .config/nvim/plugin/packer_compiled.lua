@@ -239,6 +239,11 @@ _G.packer_plugins = {
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -273,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/kumar/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 

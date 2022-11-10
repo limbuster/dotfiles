@@ -46,5 +46,11 @@ vim.opt.wrap = true
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
   command = 'silent! EslintFixAll',
-  group = vim.api.nvim_create_augroup('MyAutocmdsJavaScripFormatting', {}),
+  group = vim.api.nvim_create_augroup('MyAutocmdsJavaScriptFormatting', {}),
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.rs' },
+  command = 'silent! RustFmt',
+  group = vim.api.nvim_create_augroup('MyAutocmdsRustFormatting', {}),
 })
