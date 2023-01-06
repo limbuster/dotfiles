@@ -138,3 +138,6 @@ complete -o nospace -C /Users/kumar/homebrew/bin/terraform terraform
 # eval $(minikube docker-env)
 
 eval $(ssh-agent -s)
+
+GPG_TTY=$(tty)
+export GPG_TTY
