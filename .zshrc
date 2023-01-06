@@ -1,4 +1,4 @@
-export GOPATH=/Users/kumar/code/go
+export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
 
 export GOPRIVATE=gitlab.com/finverse/*  
@@ -6,7 +6,7 @@ export GOPRIVATE=gitlab.com/finverse/*
 export PATH=$HOME/bin:$HOME/.local/bin::$HOME/homebrew/bin:/usr/local/bin:/usr/local/opt/libpq/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kumar/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # export TERM=screen-256color
 
 # Set name of the theme to load --- if set to "random", it will
@@ -123,10 +123,10 @@ export NVM_DIR="$HOME/.nvm"
 # eval "$(pyenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kumar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kumar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 #source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 
