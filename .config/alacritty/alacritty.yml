@@ -24,8 +24,6 @@ scrolling:
 window:
   decorations: "none"
 
-working_directory: "/Users/kumar/code/finverse/"
-
 schemes:
   hyper: &hyper
     primary:
