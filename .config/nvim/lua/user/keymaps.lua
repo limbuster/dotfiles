@@ -58,10 +58,10 @@ keymap("n", "<leader>+", ":NvimTreeResize +20<CR>", opts)
 keymap("n", "<leader>-", ":NvimTreeResize -20<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep hidden=true<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers hidden=true<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
