@@ -107,6 +107,7 @@ return packer.startup(function(use)
   use { "eslint/eslint" }
   use { "mg979/vim-visual-multi" }
   use { "rust-lang/rust.vim" }
+  use { "towolf/vim-helm" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

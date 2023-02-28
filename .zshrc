@@ -122,12 +122,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # eval "$(pyenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
-
 #source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 
 autoload -U +X bashcompinit && bashcompinit
@@ -141,3 +135,9 @@ eval $(ssh-agent -s)
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kumar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kumar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/completion.zsh.inc'; fi
