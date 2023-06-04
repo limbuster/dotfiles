@@ -143,3 +143,4 @@ if [ -f '/Users/kumar/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kumar/goo
 if [ -f '/Users/kumar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kumar/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/sbin:$PATH"
