@@ -19,7 +19,6 @@ illuminate.configure {
     "fugitive",
     "alpha",
     "NvimTree",
-    "packer",
     "neogitstatus",
     "Trouble",
     "lir",

@@ -23,6 +23,13 @@ scrolling:
 
 window:
   decorations: "none"
+  opacity: 0.5
+  blur: true
+
+cursor:
+  style:
+    shape: "beam"
+    blinking: "on"
 
 schemes:
   hyper: &hyper

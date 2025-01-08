@@ -1,12 +1,10 @@
 # Ignore everything
 *
+**/.DS_Store
 
 # Except
+!nvim*
+!nvim/**/*
+!tmux*
+!alacritty*
 !.gitignore
-!.config/
-!.config/*
-!.config/alacritty/*
-!.config/lvim/*
-!.config/nvim/**/*
-!.config/tmux/*
-!.zshrc

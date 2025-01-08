@@ -3,9 +3,6 @@ local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
 
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -14,6 +11,9 @@ vim.g.mapleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- open config
+keymap("n", "<leader>cc", ":e ~/.config/nvim/init.lua<cr>", opts)
 
 -- Normal --
 -- Better window navigation
@@ -88,7 +88,9 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Trouble
-keymap("n", "<leader>tt", "<cmd>TroubleToggle<cr>", opts)
+keymap("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", opts)
 
 -- Other
 keymap("n", "<C-s>", ":w<CR>", opts)
+
+keymap("n", "<C-j><C-j>", ":%!jq<CR>", opts)

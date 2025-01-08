@@ -5,15 +5,15 @@ end
 
 bufferline.setup {
   options = {
-    close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-    right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+    close_command = "Bdelete! %d", 
+    right_mouse_command = "Bdelete! %d",
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thin", 
   },
 
   highlights = {
     fill = {
-      fg = { attribute = "fg", highlight = "#ff0000" },
+      fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
 
@@ -47,7 +47,6 @@ bufferline.setup {
     },
 
     tab_close = {
-      -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "Normal" },
     },
