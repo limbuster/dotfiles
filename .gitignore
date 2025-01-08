@@ -1,6 +1,5 @@
 # Ignore everything
 *
-**/.DS_Store
 
 # Except
 !nvim*
