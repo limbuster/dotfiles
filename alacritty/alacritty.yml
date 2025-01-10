@@ -29,7 +29,9 @@ window:
 cursor:
   style:
     shape: "beam"
-    blinking: "on"
+    blinking: "always"
+  thickness: 0.35
+  unfocused_hollow: true
 
 schemes:
   hyper: &hyper
