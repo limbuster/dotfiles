@@ -148,7 +148,7 @@ if [ -f '/Users/kumar/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kum
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/sbin:$PATH"
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # alias yadm='yadm --yadm-repo /.config'
 
