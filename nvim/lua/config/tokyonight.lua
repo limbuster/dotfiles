@@ -5,5 +5,4 @@ require("tokyonight").setup({
   styles = {
     functions = {}
   },
-  on_colors = function(colors) end,
 })

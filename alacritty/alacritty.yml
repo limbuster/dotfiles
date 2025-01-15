@@ -21,9 +21,10 @@ font:
 scrolling:
   history: 20000
 
+background_opacity: 0.95
 window:
   decorations: "none"
-  opacity: 0.9
+  opacity: 0.95
   blur: true
 
 cursor:

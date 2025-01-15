@@ -8,6 +8,8 @@ export PATH=$HOME/bin:$HOME/.local/bin::$HOME/homebrew/bin:/usr/local/bin:/usr/l
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export TERM=screen-256color
+export COLIMA_HOME="$HOME/.colima"
+export DOCKER_HOST="unix://${COLIMA_HOME}/default/docker.sock"
 
 export CLOUDSDK_PYTHON=/usr/local/bin/python3
 
