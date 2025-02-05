@@ -17,4 +17,3 @@ require("config.nvim-tree") -- file tree
 require("config.project") -- to use project with telescope
 require("config.telescope") -- telescope for search, open project etc
 require("config.treesitter") -- code parsing
-require("config.tokyonight") -- theme

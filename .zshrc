@@ -119,7 +119,7 @@ bindkey \^U backward-kill-line
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias vi="nvim"
 alias vim="nvim"
-alias k="kubectl"
+alias k="HTTPS_PROXY=localhost:7779 kubectl"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

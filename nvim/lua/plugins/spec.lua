@@ -4,9 +4,27 @@ return {
     "folke/tokyonight.nvim",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight]])
+    opts = {
+      transparent = true,
+      styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+      },
+      --- You can override specific color groups to use other groups or a hex color
+      --- function will be called with a ColorScheme table
+      ---@param colors ColorScheme
+      on_colors = function(colors) end,
+
+      --- You can override specific highlights to use other groups or a hex color
+      --- function will be called with a Highlights and ColorScheme table
+      ---@param highlights Highlights
+      ---@param colors ColorScheme
+      on_highlights = function(highlights, colors) end,
+    },
+    config = function(_, opts)
+      local tokyonight = require("tokyonight")
+      tokyonight.setup(opts)
+      tokyonight.load()
     end,
   },
   { "moll/vim-bbye" }, -- allows to clean up buffers
@@ -46,5 +64,12 @@ return {
   "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
-  }
+  },
+  {
+      "lukas-reineke/indent-blankline.nvim",
+      main = "ibl",
+      ---@module "ibl"
+      ---@type ibl.config
+      opts = {},
+  },
 }
